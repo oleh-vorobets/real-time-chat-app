@@ -1,0 +1,7 @@
+<li
+  [ngClass]="{received: message.senderId !== currentUser._id,
+    sended: message.senderId === currentUser._id,
+}"
+>
+  {{ message.message }}
+</li>

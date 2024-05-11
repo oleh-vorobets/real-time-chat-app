@@ -1,0 +1,12 @@
+<div class="add-room--modal">
+  <button class="exit--btn" (click)="onCloseModal()">❌</button>
+  <h3 class="title">Students</h3>
+  <ul>
+    <app-chat-item
+      *ngFor="let user of users"
+      [item]="user"
+      (notifyUserClicked)="userClicked($event)"
+    ></app-chat-item>
+  </ul>
+  <button class="btn btn-primary create-btn" (click)="addMember()">Add</button>
+</div>

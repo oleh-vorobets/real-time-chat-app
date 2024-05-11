@@ -1,0 +1,20 @@
+li {
+  margin: 1rem;
+  background-color: rgb(155, 155, 155);
+  border-radius: 1rem;
+  list-style-type: none;
+  padding: 0;
+  height: 5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  width: 90%;
+}
+
+.room-name {
+  margin: 1rem;
+  margin-top: rem;
+}
+
+.user-clicked {
+  background-color: rgb(0, 115, 177);
+}

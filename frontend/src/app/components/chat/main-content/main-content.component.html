@@ -1,0 +1,65 @@
+<div class="content">
+  <h1 class="title">Messages</h1>
+  <div class="chat-containers">
+    <div class="chat-container">
+      <div class="chat-title">
+        <span class="rooms-title">Chat room</span>
+        <button class="add-room--btn" (click)="notifyToOpenNewRoom()">
+          + New chat room
+        </button>
+      </div>
+      <ul class="chatrooms">
+        <app-room-item
+          *ngFor="let room of rooms"
+          [room]="room"
+          (selectedRoom)="onRoomClicked($event)"
+          [ngClass]="{ clicked: selectedRoom === room }"
+          [isClicked]="room === selectedRoom"
+        ></app-room-item>
+      </ul>
+    </div>
+    <div class="room-container" *ngIf="selectedRoom">
+      <span class="room-title">Chat room {{ selectedRoom.name }}</span>
+      <span class="member-title">Members</span>
+      <div class="chat-memebers">
+        <img
+          src="../../../../assets/default-user-img.jpeg"
+          class="chat-room--member"
+          *ngFor="let user of selectedRoomUsers"
+          data-tooltip=""
+        />
+        <button class="add-member--btn" (click)="notifyToOpenAddMember()">
+          <span style="font-size: 2rem; transform: translate(0, -5%)">+</span>
+        </button>
+      </div>
+      <span class="messages-title">Messages</span>
+      <div class="messages-box">
+        <ul class="messages">
+          <app-message
+            class="message"
+            *ngFor="let message of messages"
+            [message]="message"
+            class="received-message"
+          ></app-message>
+        </ul>
+      </div>
+      <div class="input-group mb-1 send-message">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Message text"
+          [(ngModel)]="inputedMessage"
+          (keyup.enter)="onSendMessage()"
+        />
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          id="button-addon2"
+          (click)="onSendMessage()"
+        >
+          Send Message
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

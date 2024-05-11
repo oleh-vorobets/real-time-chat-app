@@ -1,0 +1,38 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+.menu-bar {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  margin: 2rem 2.5rem;
+}
+
+.menu-bar a:link {
+  display: block;
+  text-decoration: none;
+}
+
+.menu-line:visited,
+.menu-line:link {
+  color: #747474;
+}
+
+.menu-line:hover,
+.menu-line:active {
+  color: #464646;
+}
+
+.opened:active,
+.opened:hover,
+.opened:visited,
+.opened:link {
+  color: #464646;
+  font-weight: 500;
+}

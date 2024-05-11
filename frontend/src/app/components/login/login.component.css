@@ -1,0 +1,18 @@
+.bg-color {
+  background-color: #ebeef4;
+}
+
+.login-page {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+}
+
+.m-page {
+  margin-top: 15vh;
+}
+
+.invalid {
+  background-color: rgb(244, 214, 210);
+  color: rgb(105, 25, 17);
+}

@@ -1,0 +1,146 @@
+* {
+  font-size: 10px;
+}
+
+.content {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+.chat-containers {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.chat-container {
+  border: 1px solid #464646;
+  width: 20rem;
+  height: 40rem;
+}
+
+.room-container {
+  border: 1px solid #464646;
+  width: 55rem;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.add-room--btn {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  color: #464646;
+}
+
+.add-room--btn:hover {
+  background-color: transparent;
+  color: black;
+}
+
+.rooms-title {
+  font-size: 1rem;
+  color: #464646;
+  font-weight: bold;
+}
+
+.chat-title {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.3rem 0.5rem;
+}
+
+.chatrooms {
+  padding: 0;
+  list-style-type: none;
+  overflow: scroll;
+  height: 92%;
+}
+
+.chat-room--member {
+  height: 2.3rem;
+  width: 2.3rem;
+  border-radius: 50%;
+  margin-bottom: 0.7rem;
+}
+
+.room-title {
+  font-size: 1rem;
+}
+
+.member-title {
+  font-size: 1rem;
+}
+
+.messages-title {
+  font-size: 1rem;
+}
+
+.chat-memebers {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.add-member--btn {
+  height: 2.3rem;
+  width: 2.3rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 0;
+  background-color: rgb(155, 155, 155);
+}
+
+.send-message {
+  position: absolute;
+  border: 1px solid rgb(155, 155, 155);
+  bottom: 2%;
+  padding: 0.7rem;
+  border-radius: 1rem;
+  width: 94%;
+}
+
+.messages-box {
+  padding: 1rem;
+  height: 65%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+}
+
+.messages {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  padding-left: 0;
+}
+
+.message {
+  overflow-wrap: break-word;
+  max-width: 75%;
+}
+
+.clicked {
+  background-color: rgb(0, 115, 177);
+}

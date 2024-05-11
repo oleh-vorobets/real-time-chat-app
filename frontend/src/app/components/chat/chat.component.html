@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div class="content">
+  <app-menu></app-menu>
+  <app-main-content
+    (notifyToNewRoom)="isAddRoomChatOpen = $event"
+    (notifyToAddMember)="isAddMemberOpen = $event"
+    (notifySelectedRoom)="onSelectedRoom($event)"
+    [room]="selectedRoom"
+  ></app-main-content>
+  <app-new-chatroom
+    *ngIf="isAddRoomChatOpen"
+    (notifyToClose)="isAddRoomChatOpen = $event"
+  ></app-new-chatroom>
+  <app-add-member
+    *ngIf="isAddMemberOpen"
+    (notifyToClose)="isAddMemberOpen = $event"
+    [room]="selectedRoom"
+    (notifyAddedMember)="onSelectedRoom($event)"
+  ></app-add-member>
+</div>
